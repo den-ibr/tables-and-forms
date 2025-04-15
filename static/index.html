@@ -9,7 +9,47 @@
 <main>
     <h1>Найди себе друга!</h1>
 
-    <!--Форму размещай тут-->
+    <form action="/pets/orders" method="post">
+        <h3>Данные животного</h3>
+        <label for="petType">Тип:</label><br>
+        <select id="petType" name="petType" required>
+            <option value="dog">Собака</option>
+            <option value="cat">Кот</option>
+            <option value="tiger">Тигр</option>
+        </select><br>
+
+        <label for="gender">Гендерная идентичность:</label><br>
+        <select id="gender" name="gender" required>
+            <option value="boy">Мужчина</option>
+            <option value="girl">Женщина</option>
+            <option value="none">Небинарная персона</option>
+        </select><br>
+
+        <label for="eyeColor">Цвет глаз:</label><br>
+        <input type="color" id="eyeColor" name="eyeColor" required><br>
+
+        <label for="number">Длина хвоста:</label><br>
+        <input type="number" value="7" min="7" max="120" step="1" id="tailLength" name="tailLength" required><br>
+
+        <label for="name">Кличка:</label><br>
+        <input type="text" value="Егор Спицын" id="name" name="name" required><br><br>
+
+        <h3>Ваши данные</h3>
+        <label for="dateOfBirth">Дата рождения:</label><br>
+        <input type="date" value="2020-12-12" id="dateOfBirth" name="dateOfBirth" required><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" value="vladimirputin@kremlin.ru" id="email" name="email" required><br>
+
+        <label for="phone">Номер телефона:</label><br>
+        <input type="tel" value="+79998884521" id="phone" name="phone" required><br>
+
+        <input type="checkbox" value="true" id="rules" name="rules" required>
+        <label for="rules">Согласие с <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">условиями использования</a></label><br>
+
+        <input type="submit" name="submit"><br>
+        <input type="reset" name="reset">
+    </form>
 
 </main>
 </body>
